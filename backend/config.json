@@ -1,0 +1,13 @@
+{
+  "scan_interval_minutes": 3,
+  "notify": {
+    "feishu_webhook": "",
+    "email": {
+      "smtp_host": "smtp.qq.com",
+      "smtp_port": 465,
+      "user": "",
+      "password": "",
+      "to": ""
+    }
+  }
+}

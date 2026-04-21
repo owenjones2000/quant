@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+akshare
+pandas
+pandas-ta
+backtrader
+lark
+apscheduler
+requests
