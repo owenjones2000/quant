@@ -1,9 +1,8 @@
-fastapi
-uvicorn
 akshare
-pandas
-pandas-ta
-backtrader
-lark
+mytt
 apscheduler
+hypothesis
+pytest
 requests
+pandas
+numpy
