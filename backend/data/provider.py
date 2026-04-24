@@ -1,52 +1,70 @@
-"""A股数据提供层 - 基于AKShare (新浪源为主)"""
+"""A股数据提供层 - 优先读本地PostgreSQL，无数据时回退AKShare"""
 import akshare as ak
 import pandas as pd
-import time
+from data.store import read_daily, read_30m, upsert_daily, upsert_30m
 
 
 def get_stock_list() -> pd.DataFrame:
     """获取全部A股列表"""
-    for _ in range(3):
-        try:
-            df = ak.stock_zh_a_spot()
-            df = df.rename(columns={"code": "代码", "name": "名称"})
-            return df[["代码", "名称"]].reset_index(drop=True)
-        except Exception:
-            time.sleep(1)
-    # 降级到baostock
-    import baostock as bs
-    bs.login()
-    rs = bs.query_stock_basic()
-    data = []
-    while rs.error_code == "0" and rs.next():
-        data.append(rs.get_row_data())
-    bs.logout()
-    df = pd.DataFrame(data, columns=rs.fields)
-    df = df[(df["type"] == "1") & (df["status"] == "1")]
-    df["代码"] = df["code"].apply(lambda x: x.split(".")[1])
-    df = df.rename(columns={"code_name": "名称"})
+    # 先尝试DB
+    try:
+        from data.db import get_conn
+        with get_conn() as conn:
+            df = pd.read_sql("SELECT code AS 代码, name AS 名称 FROM stock_info WHERE status=1", conn)
+            if len(df) > 100:
+                return df
+    except Exception:
+        pass
+    # 回退AKShare
+    df = ak.stock_zh_a_spot()
+    df = df.rename(columns={"代码": "代码", "名称": "名称"})
     return df[["代码", "名称"]].reset_index(drop=True)
 
 
 def _to_sina_code(symbol: str) -> str:
-    """'000001' -> 'sz000001'"""
     prefix = "sh" if symbol.startswith("6") else "sz"
     return f"{prefix}{symbol}"
 
 
 def get_daily_kline(symbol: str, count: int = 250) -> pd.DataFrame:
-    """获取个股日K线 (新浪源, 前复权)"""
-    code = _to_sina_code(symbol)
-    df = ak.stock_zh_a_daily(symbol=code, adjust="qfq")
-    df["date"] = pd.to_datetime(df["date"])
-    df = df.set_index("date")
-    return df[["open", "high", "low", "close", "volume"]].tail(count)
+    """获取日K线 - 优先本地DB"""
+    df = read_daily(symbol, count)
+    if len(df) >= min(count, 30):
+        return df
+    # DB数据不足，从AKShare拉取并存入DB
+    try:
+        code = _to_sina_code(symbol)
+        remote = ak.stock_zh_a_daily(symbol=code, adjust="qfq")
+        if remote.empty:
+            return df
+        remote["date"] = remote["date"].astype(str)
+        remote = remote.set_index("date")
+        remote = remote[["open", "high", "low", "close", "volume"]].tail(max(count, 500))
+        remote["amount"] = 0
+        upsert_daily(symbol, remote)
+        return remote.tail(count)
+    except Exception:
+        return df  # 网络失败就用DB里有的
 
 
-def get_minute_kline(symbol: str, period: str = "15", count: int = 100) -> pd.DataFrame:
-    """获取分钟K线 (新浪源)"""
-    code = _to_sina_code(symbol)
-    df = ak.stock_zh_a_minute(symbol=code, period=period, adjust="qfq")
-    df["day"] = pd.to_datetime(df["day"])
-    df = df.set_index("day")
-    return df[["open", "high", "low", "close", "volume"]].tail(count)
+def get_minute_kline(symbol: str, period: str = "30", count: int = 100) -> pd.DataFrame:
+    """获取分钟K线 - 优先本地DB (仅30分钟线)"""
+    if period == "30":
+        df = read_30m(symbol, count)
+        if len(df) >= min(count, 20):
+            return df
+    # 回退AKShare
+    try:
+        code = _to_sina_code(symbol)
+        remote = ak.stock_zh_a_minute(symbol=code, period=period, adjust="qfq")
+        if remote.empty:
+            return pd.DataFrame()
+        remote["day"] = remote["day"].astype(str)
+        remote = remote.set_index("day")
+        remote = remote[["open", "high", "low", "close", "volume"]].tail(count)
+        if period == "30":
+            remote.index.name = "datetime"
+            upsert_30m(symbol, remote)
+        return remote
+    except Exception:
+        return pd.DataFrame()

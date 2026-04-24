@@ -1,8 +1,9 @@
+fastapi
+uvicorn
 akshare
-mytt
-apscheduler
-hypothesis
-pytest
-requests
 pandas
 numpy
+apscheduler
+requests
+baostock
+psycopg2-binary

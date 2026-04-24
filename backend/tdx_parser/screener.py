@@ -5,36 +5,8 @@ import json
 import pandas as pd
 from pathlib import Path
 from data.provider import get_daily_kline, get_stock_list
+from tdx_parser.watchlist import load_watchlist, save_watchlist, add_to_watchlist, remove_from_watchlist
 from MyTT import *
-
-WATCHLIST_FILE = Path(__file__).parent.parent / "data" / "watchlist.json"
-
-
-def load_watchlist() -> list:
-    if WATCHLIST_FILE.exists():
-        return json.loads(WATCHLIST_FILE.read_text())
-    return []
-
-
-def save_watchlist(stocks: list):
-    WATCHLIST_FILE.write_text(json.dumps(stocks, ensure_ascii=False, indent=2))
-
-
-def add_to_watchlist(codes: list):
-    """添加股票到自选股"""
-    wl = load_watchlist()
-    for c in codes:
-        if c not in [s["code"] for s in wl]:
-            wl.append({"code": c})
-    save_watchlist(wl)
-    return wl
-
-
-def remove_from_watchlist(codes: list):
-    wl = load_watchlist()
-    wl = [s for s in wl if s["code"] not in codes]
-    save_watchlist(wl)
-    return wl
 
 
 # ============ 选股公式 ============

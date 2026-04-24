@@ -2,12 +2,15 @@
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException
 from data.provider import get_daily_kline, get_stock_list
-from tdx_parser.screener import FORMULAS, screen_stocks, load_watchlist, add_to_watchlist, remove_from_watchlist
+from tdx_parser.screener import FORMULAS, screen_stocks
+from tdx_parser.watchlist import load_watchlist, add_to_watchlist, remove_from_watchlist
+from tdx_parser.daily_scanner import daily_pipeline, scan_breakout
 from signals.engine import SIGNALS, scan_all_signals
 from scheduler import start_scheduler, stop_scheduler, scan_job
 from config import load_config, save_config
 from backtest.engine import backtest
 from MyTT import *
+from strategies.ma_kdj_strategy import buy_signal_simple, sell_signal_simple
 
 
 @asynccontextmanager
@@ -89,6 +92,11 @@ def update_config(cfg: dict):
 # ---- 回测 ----
 # 预置策略: 买入/卖出信号函数对
 STRATEGIES = {
+    "ma_kdj_pressure": {
+        "name": "多周期均线+KDJ压力支撑",
+        "buy": buy_signal_simple,
+        "sell": sell_signal_simple,
+    },
     "macd": {
         "name": "MACD金叉死叉",
         "buy":  lambda C,H,L,O,V: CROSS(EMA(C,12)-EMA(C,26), EMA(EMA(C,12)-EMA(C,26),9)),
