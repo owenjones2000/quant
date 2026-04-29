@@ -10,9 +10,11 @@ def get_stock_list() -> pd.DataFrame:
     try:
         from data.db import get_conn
         with get_conn() as conn:
-            df = pd.read_sql("SELECT code AS 代码, name AS 名称 FROM stock_info WHERE status=1", conn)
-            if len(df) > 100:
-                return df
+            with conn.cursor() as cur:
+                cur.execute("SELECT code AS 代码, name AS 名称 FROM stock_info WHERE status=1")
+                rows = cur.fetchall()
+                if len(rows) > 100:
+                    return pd.DataFrame(rows, columns=["代码", "名称"])
     except Exception:
         pass
     # 回退AKShare
