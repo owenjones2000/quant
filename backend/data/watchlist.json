@@ -258,5 +258,605 @@
     ],
     "reason": "突破压力线37.5, 涨幅8.62%",
     "pressure_at_add": 37.5
+  },
+  {
+    "code": "600246",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线9.33, 涨幅10.0%",
+    "pressure_at_add": 9.33
+  },
+  {
+    "code": "600338",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线21.9, 涨幅10.01%",
+    "pressure_at_add": 21.9
+  },
+  {
+    "code": "600433",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线3.63, 涨幅10.0%",
+    "pressure_at_add": 3.63
+  },
+  {
+    "code": "600707",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线7.12, 涨幅10.04%",
+    "pressure_at_add": 7.12
+  },
+  {
+    "code": "603501",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线92.18, 涨幅10.0%",
+    "pressure_at_add": 92.18
+  },
+  {
+    "code": "603773",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线46.0, 涨幅10.0%",
+    "pressure_at_add": 46.0
+  },
+  {
+    "code": "000593",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线18.69, 涨幅9.99%",
+    "pressure_at_add": 18.69
+  },
+  {
+    "code": "001211",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线31.75, 涨幅10.01%",
+    "pressure_at_add": 31.75
+  },
+  {
+    "code": "002120",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线6.94, 涨幅10.01%",
+    "pressure_at_add": 6.94
+  },
+  {
+    "code": "002181",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线12.37, 涨幅9.97%",
+    "pressure_at_add": 12.37
+  },
+  {
+    "code": "002475",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线60.65, 涨幅9.05%",
+    "pressure_at_add": 60.65
+  },
+  {
+    "code": "002741",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线17.39, 涨幅9.98%",
+    "pressure_at_add": 17.39
+  },
+  {
+    "code": "002902",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线22.48, 涨幅10.0%",
+    "pressure_at_add": 22.48
+  },
+  {
+    "code": "300604",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线148.0, 涨幅10.77%",
+    "pressure_at_add": 148.0
+  },
+  {
+    "code": "300853",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线24.54, 涨幅15.94%",
+    "pressure_at_add": 24.54
+  },
+  {
+    "code": "300870",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线311.99, 涨幅12.69%",
+    "pressure_at_add": 311.99
+  },
+  {
+    "code": "301222",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线37.85, 涨幅9.14%",
+    "pressure_at_add": 37.85
+  },
+  {
+    "code": "301511",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线40.13, 涨幅12.01%",
+    "pressure_at_add": 40.13
+  },
+  {
+    "code": "301629",
+    "group": "auto",
+    "add_date": "2026-04-27",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线284.0, 涨幅8.4%",
+    "pressure_at_add": 284.0
+  },
+  {
+    "code": "603095",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线18.26, 涨幅10.03%",
+    "pressure_at_add": 18.26
+  },
+  {
+    "code": "603336",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线10.99, 涨幅10.02%",
+    "pressure_at_add": 10.99
+  },
+  {
+    "code": "603399",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线13.1, 涨幅10.02%",
+    "pressure_at_add": 13.1
+  },
+  {
+    "code": "605289",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线132.5, 涨幅10.0%",
+    "pressure_at_add": 132.5
+  },
+  {
+    "code": "001358",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线26.5, 涨幅10.01%",
+    "pressure_at_add": 26.5
+  },
+  {
+    "code": "002210",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线2.61, 涨幅9.85%",
+    "pressure_at_add": 2.61
+  },
+  {
+    "code": "002297",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线16.08, 涨幅9.99%",
+    "pressure_at_add": 16.08
+  },
+  {
+    "code": "002313",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线8.58, 涨幅10.0%",
+    "pressure_at_add": 8.58
+  },
+  {
+    "code": "002647",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线10.55, 涨幅9.99%",
+    "pressure_at_add": 10.55
+  },
+  {
+    "code": "002652",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线4.83, 涨幅9.98%",
+    "pressure_at_add": 4.83
+  },
+  {
+    "code": "300191",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线38.0, 涨幅8.49%",
+    "pressure_at_add": 38.0
+  },
+  {
+    "code": "300571",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线33.39, 涨幅12.92%",
+    "pressure_at_add": 33.39
+  },
+  {
+    "code": "301217",
+    "group": "auto",
+    "add_date": "2026-04-28",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线48.78, 涨幅15.28%",
+    "pressure_at_add": 48.78
+  },
+  {
+    "code": "600379",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线13.09, 涨幅10.03%",
+    "pressure_at_add": 13.09
+  },
+  {
+    "code": "600545",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线4.3, 涨幅9.92%",
+    "pressure_at_add": 4.3
+  },
+  {
+    "code": "603026",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线101.0, 涨幅10.0%",
+    "pressure_at_add": 101.0
+  },
+  {
+    "code": "603083",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线132.68, 涨幅10.0%",
+    "pressure_at_add": 132.68
+  },
+  {
+    "code": "603538",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线57.29, 涨幅8.62%",
+    "pressure_at_add": 57.29
+  },
+  {
+    "code": "603629",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线106.0, 涨幅10.0%",
+    "pressure_at_add": 106.0
+  },
+  {
+    "code": "603906",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线21.48, 涨幅10.0%",
+    "pressure_at_add": 21.48
+  },
+  {
+    "code": "605006",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线10.47, 涨幅9.97%",
+    "pressure_at_add": 10.47
+  },
+  {
+    "code": "605168",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线42.28, 涨幅10.0%",
+    "pressure_at_add": 42.28
+  },
+  {
+    "code": "605299",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线20.83, 涨幅10.01%",
+    "pressure_at_add": 20.83
+  },
+  {
+    "code": "000703",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线12.51, 涨幅8.59%",
+    "pressure_at_add": 12.51
+  },
+  {
+    "code": "001266",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线33.29, 涨幅9.99%",
+    "pressure_at_add": 33.29
+  },
+  {
+    "code": "002081",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线4.49, 涨幅10.06%",
+    "pressure_at_add": 4.49
+  },
+  {
+    "code": "002192",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线80.15, 涨幅10.0%",
+    "pressure_at_add": 80.15
+  },
+  {
+    "code": "002645",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线17.12, 涨幅10.0%",
+    "pressure_at_add": 17.12
+  },
+  {
+    "code": "002655",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线18.05, 涨幅10.0%",
+    "pressure_at_add": 18.05
+  },
+  {
+    "code": "002709",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线50.66, 涨幅9.99%",
+    "pressure_at_add": 50.66
+  },
+  {
+    "code": "300209",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线13.49, 涨幅20.01%",
+    "pressure_at_add": 13.49
+  },
+  {
+    "code": "300632",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线15.98, 涨幅20.01%",
+    "pressure_at_add": 15.98
+  },
+  {
+    "code": "300745",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线27.79, 涨幅14.5%",
+    "pressure_at_add": 27.79
+  },
+  {
+    "code": "300769",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout",
+      "limit_up"
+    ],
+    "reason": "突破压力线49.2, 涨幅20.0%",
+    "pressure_at_add": 49.2
+  },
+  {
+    "code": "300903",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线39.32, 涨幅10.29%",
+    "pressure_at_add": 39.32
+  },
+  {
+    "code": "301358",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线86.74, 涨幅15.48%",
+    "pressure_at_add": 86.74
+  },
+  {
+    "code": "301603",
+    "group": "auto",
+    "add_date": "2026-04-29",
+    "tags": [
+      "breakout"
+    ],
+    "reason": "突破压力线97.34, 涨幅10.91%",
+    "pressure_at_add": 97.34
   }
 ]

@@ -7,7 +7,7 @@
 BACKEND_DIR="$(cd "$(dirname "$0")" && pwd)"
 PID_FILE="$BACKEND_DIR/logs/server.pid"
 LOG_FILE="$BACKEND_DIR/logs/server.log"
-PYTHON="python3"
+PYTHON="$BACKEND_DIR/.venv/bin/python"
 PORT=8000
 
 mkdir -p "$BACKEND_DIR/logs"

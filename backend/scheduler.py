@@ -50,7 +50,13 @@ def _notify(title: str, text: str):
 
 def scan_job():
     """盘中信号扫描"""
-    if not _is_trading_time():
+    now = datetime.datetime.now()
+    t = now.time()
+    # 双重保险：cron 已限制时间段，这里再检查一次
+    if not (datetime.time(9, 30) <= t <= datetime.time(11, 30) or
+            datetime.time(13, 0) <= t <= datetime.time(15, 0)):
+        return
+    if now.weekday() >= 5:
         return
 
     global _last_signals
@@ -98,17 +104,28 @@ def start_scheduler():
     cfg = load_config()
     interval = cfg.get("scan_interval_minutes", 3)
 
-    # 盘中信号扫描
-    scheduler.add_job(scan_job, "interval", minutes=interval,
-                      id="signal_scan", replace_existing=True)
+    # 盘中信号扫描 - 只在交易时间段内触发（避免非交易时间无意义唤醒）
+    # 上午 9:30-11:30
+    scheduler.add_job(scan_job, "cron",
+                      day_of_week="mon-fri",
+                      hour="9-11", minute=f"*/{interval}",
+                      id="signal_scan_am", replace_existing=True,
+                      misfire_grace_time=120)
+    # 下午 13:00-15:00
+    scheduler.add_job(scan_job, "cron",
+                      day_of_week="mon-fri",
+                      hour="13-14", minute=f"*/{interval}",
+                      id="signal_scan_pm", replace_existing=True,
+                      misfire_grace_time=120)
 
-    # 收盘后每日选股 (15:10执行)
+    # 收盘后每日选股 (15:10执行) - 增大 misfire_grace_time 防止睡眠错过
     scheduler.add_job(daily_scan_job, "cron", hour=15, minute=10,
                       day_of_week="mon-fri",
-                      id="daily_scan", replace_existing=True)
+                      id="daily_scan", replace_existing=True,
+                      misfire_grace_time=3600)  # 1小时内唤醒仍执行
 
     scheduler.start()
-    print(f"✅ 调度器已启动: 盘中每{interval}分钟扫描信号, 15:10运行每日选股")
+    print(f"✅ 调度器已启动: 盘中每{interval}分钟扫描信号(仅交易时间), 15:10运行每日选股")
 
 
 def stop_scheduler():
