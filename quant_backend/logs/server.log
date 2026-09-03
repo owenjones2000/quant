@@ -21,3 +21,13 @@ INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
 ✅ 调度器已启动: 盘中每3分钟扫描信号(仅交易时间), 15:10运行每日选股
 INFO:     127.0.0.1:59966 - "POST /api/signals/scan-now HTTP/1.1" 200 OK
+Run time of job "scan_job (trigger: cron[day_of_week='mon-fri', hour='13-14', minute='*/3'], next run at: 2026-05-14 13:00:00 HKT)" was missed by 18:45:22.826608
+Run time of job "daily_scan_job (trigger: cron[day_of_week='mon-fri', hour='15', minute='10'], next run at: 2026-05-15 15:10:00 HKT)" was missed by 18:32:22.838876
+Run time of job "scan_job (trigger: cron[day_of_week='mon-fri', hour='13-14', minute='*/3'], next run at: 2026-05-15 13:27:00 HKT)" was missed by 0:02:37.143066
+Run time of job "scan_job (trigger: cron[day_of_week='mon-fri', hour='9-11', minute='*/3'], next run at: 2026-05-29 09:00:00 HKT)" was missed by 4:39:50.279016
+Run time of job "scan_job (trigger: cron[day_of_week='mon-fri', hour='13-14', minute='*/3'], next run at: 2026-05-29 13:00:00 HKT)" was missed by 1:39:50.344220
+Run time of job "daily_scan_job (trigger: cron[day_of_week='mon-fri', hour='15', minute='10'], next run at: 2026-05-29 15:10:00 HKT)" was missed by 1:26:50.356464
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [58602]
